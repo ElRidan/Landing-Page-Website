@@ -1,0 +1,160 @@
+:root{
+  --font-mobile-big: 2.5rem;
+  --font-mobile-medium: 1.25rem;
+  --font-mobile-small: 0.75rem;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+a{
+  color: black;
+  text-decoration: none;
+  appearance: none;
+  padding: 0.75rem;
+}
+
+
+#header{
+  
+    width:100vw;
+    height: 25vh;
+    max-height: 20vh;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    place-content: center space-between;
+    padding: 1% 5%;
+    z-index: 999;
+    background-color: darkred;
+}
+
+  
+
+#header-img{
+  max-width: 25vw;
+  max-height: 25vw;
+  object-fit: fill;
+}
+
+
+  
+#nav-bar{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+  
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    position: relative;
+    margin: 19vh 0;
+}
+
+main section{
+  display: flex;
+  margin: 0 0 5vh;
+}
+
+
+
+#hero{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: whitesmoke;
+  width: 100%;
+  height: 75vh;
+  min-height: 400px;
+  gap:1rem;
+}
+
+#hero h1{
+  font-size: var(--font-mobile-big);
+  color: inherit;
+}
+
+#hero a{
+  background-color: whitesmoke;
+  font-weight: 500;
+}
+
+
+
+#services{
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(27, 27, 27);
+  gap: 1rem;
+}
+
+.services-container{
+  padding: 0 0.5  em;
+  text-align:left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  line-height: 1.5rem;
+  width: 80%;
+  padding: 3% 1%;
+  background-color: black;
+  color:rgb(247, 223, 255);
+}
+  
+.services-container h4, p, ul, li{
+  line-height: 1.75rem;
+  color: inherit;
+}
+  
+.services-container ul li{
+  padding:0.5em 1em;
+  
+}
+
+#contact{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap:1.5rem;
+  padding: 1%;
+  width: 100%;
+  height: auto;
+}
+
+#contact p, h2{
+  font-size: var(--font-mobile-medium);
+}
+
+.contact-container-button button{
+  font-size: var(--font-mobile-medium);
+}
+
+.contact-container-button button{
+  color: rgb(219, 219, 219);
+  background-color: black;
+  border: none;
+  padding: 0.5rem;
+}
+
+.contact-container-button button
+  
+  @media only screen and (min-width: 700px){
+    
+}
