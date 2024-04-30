@@ -43,7 +43,7 @@ a{
 } 
 
 #header-img{
-  max-width: 25%;
+  max-width: 25%  ;
   max-height: 25vw;
   object-fit: fill;
 }
@@ -65,6 +65,7 @@ main{
   align-items: center;
     position: relative;
     margin: 19vh 0;
+    
 }
 
 main section{
@@ -138,12 +139,13 @@ main section:not(:first-of-type){
 }
 
 #contact{
+  
   background-color: whitesmoke;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap:1.5rem;
-  padding: 1%;
+  padding: 5% 1%;
   width: 100%;
   height: auto;
   margin: 0 0 1rem;
