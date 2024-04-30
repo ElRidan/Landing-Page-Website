@@ -1,5 +1,4 @@
 :root{
-  --font-mobile-bigger: 3.5rem;
   --font-mobile-big: 2.5rem;
   --font-mobile-medium: 1.25rem;
   --font-mobile-small: 0.75rem;
@@ -10,7 +9,7 @@
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    scroll-behavior: smooth;
+    
     list-style: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -31,19 +30,20 @@ a{
     position: fixed;
     top: 0px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1% 8%;
+    place-content: center space-between;
+    padding: 1% 5%;
     z-index: 999;
     background-color: darkred;
 }
 
-#mobile-nav i{
-  font-size: var(--font-mobile-big );
-} 
+  
 
 #header-img{
+<<<<<<< HEAD
   max-width: 25%  ;
+=======
+  max-width: 25vw;
+>>>>>>> parent of c4304e6 (0.0.2 feat: I fixed margins on the sections side)
   max-height: 25vw;
   object-fit: fill;
 }
@@ -59,7 +59,6 @@ a{
 }
   
 main{
-  background-color: rgb(27, 27, 27);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,13 +69,9 @@ main{
 
 main section{
   display: flex;
-  margin: 0 0 10vh;
+  margin: 0 0 5vh;
 }
 
-main section:not(:first-of-type){
-  
-  margin: 0 0 10vh;
-}
 
 
 #hero{
@@ -139,8 +134,11 @@ main section:not(:first-of-type){
 }
 
 #contact{
+<<<<<<< HEAD
   
   background-color: whitesmoke;
+=======
+>>>>>>> parent of c4304e6 (0.0.2 feat: I fixed margins on the sections side)
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -148,7 +146,6 @@ main section:not(:first-of-type){
   padding: 5% 1%;
   width: 100%;
   height: auto;
-  margin: 0 0 1rem;
 }
 
 #contact p, h2{
@@ -166,10 +163,8 @@ main section:not(:first-of-type){
   padding: 0.5rem;
 }
 
-.contact-container-button button{
-
-}
+.contact-container-button button
   
-@media only screen and (min-width: 700px){
+  @media only screen and (min-width: 700px){
     
 }
