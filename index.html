@@ -10,23 +10,28 @@
   </head>
   <body>
     <header id="header">
-      <img id="header-img" src="https://pngimg.com/uploads/toast/toast_PNG77.png" alt="Logo of the page">
+      <img id="header-img" src="public/Logo simple-Photoroom.png-Photoroom.png" alt="Logo of the page">
       <nav id="nav-bar">
-        <a class="nav-link" href="#features-section">Features</a>
-        <a class="nav-link" href="#video-section">Video</a>
-        <a class="nav-link" href="#prices-section">Prices</a>
-        <a class="nav-link" href="#footer">Contact</a>
+        <a class="nav-link" href="#about">About us</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a id="close" class="nav-link"><i class="fa-solid fa-x"></i></a>
       </nav>
+      <div class="mobile">
+        <i id="bar" class="fa-solid fa-bars" ></i>
+     </div>
     </header>
     <main>
       <section id="hero">
         <h1>Website and Desktop Apps Made with you in mind</h1>
-
         <p>if your business needs it, we develop it</p>
         <a href="">Contact us</a>
       </section>
 
+      <section id="about"></section>
+
       <section id="services">
+        <h1 id="services-title">Services</h1>
         <div class="services-container">
           <h4>Simple Website</h4>
           <img src="#" alt="Image of the service we provide for websites">
@@ -35,10 +40,10 @@
             Made mostly for individuals and small businesses.
           </p>
           <ul>
-            <li>We set it up for you, domain name and host, so you can have it ready as soon as we get back to you</li>
-            <li>We offer you free support for the following 3 months after deployment of the page</li>
-            <li>Can have up to 10 pages</li>
-            <li>Estimate delivery time: 1-2 weeks average</li>
+            <li> - We set it up for you, domain name and host, so you can have it ready as soon as we get back to you</li>
+            <li> - We offer you free support for the following 3 months after deployment of the page</li>
+            <li> - Can have up to 10 pages</li>
+            <li> - Estimate delivery time: 1-2 weeks average</li>
           </ul>
           <p>Basic Price: Since 250$</p>
         </div>
@@ -48,10 +53,10 @@
           <img src="#" alt="Image of the service we provide">
           <p>A web application made for businesses or individuals looking to start branching out into the online market</p>
           <ul>
-            <li>We set it up for you, domain name, host provider, database configuration, payment gateway configuration and more</li>
-            <li>We offer free support for the following 6 months after the deployment of the page.</li>
-            <li>Starting from 30 pages. (every next 20 extra pages costs 20$ extra).</li>
-            <li>Estimate delivery time: 4 or more weeks (depending on the complexity)</li>
+            <li> - We set it up for you, domain name, host provider, database configuration, payment gateway configuration and more</li>
+            <li> - We offer free support for the following 6 months after the deployment of the page.</li>
+            <li> - Starting from 30 pages. (every next 20 extra pages costs 20$ extra).</li>
+            <li> - Estimate delivery time: 4 or more weeks (depending on the complexity)</li>
           </ul>
           <p>Basic Price: Starting at 500$</p>
         </div>
@@ -63,10 +68,10 @@
             to powerful solutions that make work easier and faster.
           </p>
           <ul>
-            <li>We offer free support for the following 6 months</li>
-            <li>Price depending on the complexity of the solution you need.</li>
-            <li>Estimated delivery time: 4 or more weeks.</li>
-            <li>Compatibility with the usual OS (Windows, Mac, etc)</li>
+            <li> - We offer free support for the following 6 months</li>
+            <li> - Price depending on the complexity of the solution you need.</li>
+            <li> - Estimated delivery time: 4 or more weeks.</li>
+            <li> - Compatibility with the popular OS's (Windows, Mac, etc)</li>
           </ul>
           <p>Basic Price: Starting at 500$</p>
         </div>
@@ -76,13 +81,12 @@
         <h2>If you need to contact me, you can with these different methods</h2>
        
         <div class="contact-container-button">
-          <button class="contact-button"><i class="fa-solid fa-envelope"></i> - Email</button>
-          <button class="contact-button"><i class="fa-solid fa-mobile-screen"></i> - Phone</button>
-          <button class="contact-button"><i class="fa-brands fa-linkedin"></i> - Linkedin</button>
+          <button id="email-button" class="contact-button" onclick='window.location="mailto:nesquivelwork@gmail.com";'><i class="fa-solid fa-envelope"></i> - Email</button>
+          <button id="phone-button" class="contact-button" onclick = 'window.location="https://wa.me/+19018711073";'><i class="fa-solid fa-mobile-screen" ></i> - Phone</button>
+          <button id="linkedin-button" class="contact-button" onclick='window.location="https://www.linkedin.com/in/nadir-j-esquivel-915282302/";'><i class="fa-brands fa-linkedin" ></i> - Linkedin</button>
         </div>
         <p>I read and answer messages at:</p>
         <p>Monday to friday: 12:00 PM - 10:00 PM</p>
-        
       </section>
 
       <!-- <form id="form" action="https://www.freecodecamp.com/email-submit">
