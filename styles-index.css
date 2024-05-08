@@ -1,11 +1,20 @@
 :root{
+  /*Font sizes*/
   --font-mobile-big: calc(2rem + 2vw);
   --font-mobile-medium: calc(1.25rem + 1.25vw);
   --font-mobile-small: calc(0.80rem + 0.80vw);
   --font-mobile-smallest : calc(0.75rem + 0.75vw);
+  /*Colors*/
+  --primary-color: rgb(95, 134, 112);
+  --secondary-color: rgb(255, 152, 0);
+  --auxiliar-color: rgb(255, 152, 0);
+  --contrast-color: rgb(130, 3, 0); 
+  --font-color: rgb(245, 245, 242);
+  /*hsl(300, 2%, 11%)*/
 }
 
 *{
+  
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -17,9 +26,16 @@
 }
   
 
+html{
+  background-color: var(--primary-color);
+}
+
+.contrast{
+  color:var(--contrast-color)
+}
 
 a{
-  color: black;
+  color: var(--font-color);
   text-decoration: none;
   appearance: none;
   padding: 0.75rem;
@@ -28,8 +44,8 @@ a{
 
 #header{
     width:100vw;
-    height: 25vh;
-    max-height: 20vh;
+   
+    max-height: 17vh;
     position: fixed;
     display: flex;
     align-items: center;
@@ -37,7 +53,7 @@ a{
     top: 0px;
     padding: 1% 7%;
     z-index: 999;
-    background-color: darkred;
+    background-color: var(--auxiliar-color);
 }
 
 
@@ -47,7 +63,7 @@ a{
 }
 
 #header-img{
-  max-width: calc(25%) ;
+  max-width: calc(20%);
   object-fit: contain;
   aspect-ratio: 16/9;
 }
@@ -64,7 +80,7 @@ a{
   right: -300px;
   height: 100vh;
   width: 300px;  
-  background-color: darkred;
+  background-color: var(--auxiliar-color);
   box-shadow: 0 40px 60px rgba(70, 62, 221, 0.1);
   padding: 80px 0 0 10px;
   transition: 0.3s ease;
@@ -84,11 +100,11 @@ a{
 }
 
 #nav-bar a:hover, #nav-bar i:hover, .mobile i:hover{
-  color:whitesmoke
+  color:var(--font-color)
 }
 
 main{
-  background-color: black;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +118,7 @@ main section{
   margin: 0 0 5vh;
 }
 
-
+/*Hero styling*/
 
 #hero{
   text-align: center;
@@ -110,10 +126,10 @@ main section{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: whitesmoke;
+  background: var(--primary-color);
+  color: var(--font-color);
   width: 100%;
-  height: 75vh;
+  height: 90vh;
   min-height: 400px;
   gap:1rem;
   padding: 0 10%;
@@ -129,34 +145,88 @@ main section{
 }
 
 #hero a{
-  background-color: whitesmoke;
+  background-color: var(--contrast-color);
   font-weight: 500;
+  color: var(--font-color);
   font-size: var(--font-mobile-small);
   border: 0.5px solid transparent;
 }
 
 #hero a:hover{
-  color: whitesmoke;
-  background-color: black;
-  border: 0.5px solid whitesmoke;
+  color: var(--font-color);
+  background-color: var(--primary-color);
+  border: 0.5px solid var(--font-color);
+}
+
+/*about styling*/
+
+#about{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding: 5% 15%;
+  gap: 2rem;
+}
+
+#about h2, #about p{
+  color: var(--font-color);
+}
+#about h2{
+  font-size: var(--font-mobile-big);
 }
 
 
+.about-content{
+  width: 60%;
+}
+
+.about-deco{
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 9vw;
+  display: flex;
+  gap: 15%;
+ 
+}
+.about-deco-stripe{
+  position: relative;
+  width: var(--font-mobile-big);
+  height: var(--font-mobile-big);
+  background-color: var(--primary-color);
+  border-radius: 0px 0px 30px 30px;
+  border-right: solid 1.5px gray;
+  border-bottom: solid 1.5px gray;
+  
+}
+.about-deco-stripe:nth-child(2){
+  height: calc(2 * var(--font-mobile-big));
+}
+.about-deco-stripe:nth-child(3){
+  height: calc(3 * var(--font-mobile-big));
+}
+
+ /*Services styling*/
 #services{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: var(--primary-color);
   gap: 4rem;
   padding: 5% 0 10%;
 }
 
 #services-title{
   font-size: var(--font-mobile-big);
-  color: whitesmoke;
+  color: var(--font-color);
 }
 
 .services-container{
+  position: relative;;
+  border-radius: 50px;
   padding: 5%;
   text-align:left;
   display: flex;
@@ -167,10 +237,11 @@ main section{
   line-height: 1.5rem;
   width: 60%;
   
-  background-color: rgb(27, 27, 27);
-  color:rgb(247, 223, 255);
+  background-color: var(--secondary-color);
+  color:var(--font-color);
 }
-  
+
+
 .services-container h4, p, ul, li{
   line-height: 1.75rem;
   color: inherit;
@@ -194,18 +265,56 @@ main section{
   font-size: var(--font-mobile-small);
 }
 
+.services-container p:last-child{
+  background-color: var(--contrast-color);
+  padding: 5%;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.services-container p:last-child:hover{
+  background-color: var(--primary-color);
+}
+
 .services-container img{
-  
+  border-radius: 30px;
   width: 50%;
   object-fit: contain;
 }
 
+  
+.services-deco{
+  display: flex;
+  justify-content: space-evenly;
+  
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  background-color: black;
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
+.services-deco-stripes{
+  position: relative;
+  height: 2vw;
+  width: 5vw;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+}
+
+.services-deco-stripes:nth-child(2){
+  height: 5vw;
+}
+.services-deco-stripes:nth-child(3){
+  height: 3vw;
+}
+
 /*CONTACT section*/
 #contact{
-  background-color: rgb(27, 27, 27);
+  position: relative;
+  background-color: var(--secondary-color);
   color: white;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
   gap:1.5rem;
   padding: 5% 15%;
@@ -213,21 +322,67 @@ main section{
   height: auto;
 }
 
+#contact h2{
+  font-size: var(--font-mobile-big);
+}
+
 #contact p, h2{
   font-size: var(--font-mobile-small);
 }
 
+.contact-container-button{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+
+
 .contact-container-button button{
   font-size: var(--font-mobile-small);
   cursor: pointer;  
+  color: var(--font-color);
+  background-color: var(--contrast-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 20vw;
 }
 
-.contact-container-button button{
-  color: rgb(219, 219, 219);
-  background-color: black;
-  border: none;
-  padding: 0.5rem;
+.contact-container-button button:hover{
+  background-color: var(--primary-color);
 }
+
+#contact .about-deco{
+  right: unset;
+  left: 15vw;
+  
+}
+
+.contact-hours{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+#contact .about-deco-stripe{
+  border-left: solid 1.5px gray;
+  border-right: solid 0px gray;
+}
+
+#contact .about-deco-stripe:nth-child(3){
+  height: calc(1 * var(--font-mobile-big));
+}
+
+#contact .about-deco-stripe:nth-child(2){
+  height: calc(2 * var(--font-mobile-big));
+}
+#contact .about-deco-stripe:nth-child(1){
+  height: calc(3 * var(--font-mobile-big));
+}
+  
+
+  
 
   
   @media only screen and (min-width: 700px){
