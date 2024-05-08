@@ -5,11 +5,12 @@
   --font-mobile-small: calc(0.80rem + 0.80vw);
   --font-mobile-smallest : calc(0.75rem + 0.75vw);
   /*Colors*/
-  --primary-color: rgb(95, 134, 112);
+  --background-color: hsl(240, 1%, 13%);
+  --primary-color: hsl(265, 35%, 40%);
   --secondary-color: rgb(255, 152, 0);
-  --auxiliar-color: rgb(255, 152, 0);
-  --contrast-color: rgb(130, 3, 0); 
-  --font-color: rgb(245, 245, 242);
+  --contrast-color: hsl(330, 80%, 30%); 
+  --font-color: rgb(230, 226, 239);
+  --font-aux-color: hsl(0, 1%, 13%); 
   /*hsl(300, 2%, 11%)*/
 }
 
@@ -27,7 +28,7 @@
   
 
 html{
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .contrast{
@@ -53,7 +54,7 @@ a{
     top: 0px;
     padding: 1% 7%;
     z-index: 999;
-    background-color: var(--auxiliar-color);
+    background-color: var(--primary-color);
 }
 
 
@@ -80,7 +81,7 @@ a{
   right: -300px;
   height: 100vh;
   width: 300px;  
-  background-color: var(--auxiliar-color);
+  background-color: var(--secondary-color);
   box-shadow: 0 40px 60px rgba(70, 62, 221, 0.1);
   padding: 80px 0 0 10px;
   transition: 0.3s ease;
@@ -104,13 +105,13 @@ a{
 }
 
 main{
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
     position: relative;
     margin: 19vh 0;
-    
+  
 }
 
 main section{
@@ -126,7 +127,7 @@ main section{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--primary-color);
+  background: var(--background-color);
   color: var(--font-color);
   width: 100%;
   height: 90vh;
@@ -154,7 +155,7 @@ main section{
 
 #hero a:hover{
   color: var(--font-color);
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   border: 0.5px solid var(--font-color);
 }
 
@@ -165,7 +166,7 @@ main section{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   width: 100%;
   padding: 5% 15%;
   gap: 2rem;
@@ -196,12 +197,10 @@ main section{
   position: relative;
   width: var(--font-mobile-big);
   height: var(--font-mobile-big);
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   border-radius: 0px 0px 30px 30px;
-  border-right: solid 1.5px gray;
-  border-bottom: solid 1.5px gray;
-  
 }
+
 .about-deco-stripe:nth-child(2){
   height: calc(2 * var(--font-mobile-big));
 }
@@ -209,17 +208,35 @@ main section{
   height: calc(3 * var(--font-mobile-big));
 }
 
+
+/*about bottom lines style*/
+#about .services-deco{
+  justify-content: center;
+  width: 100%;
+  height: 4vh;
+  bottom: 0;
+  left: 0;
+  z-index:0;
+  gap: 4%;
+}
+#about .services-deco .services-deco-stripes{
+  width: 5.6%;
+  height: 80vh;
+}
+
  /*Services styling*/
 #services{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   gap: 4rem;
   padding: 5% 0 10%;
 }
 
 #services-title{
+  z-index: 999;
+  text-indent: -0.15rem;
   font-size: var(--font-mobile-big);
   color: var(--font-color);
 }
@@ -237,7 +254,7 @@ main section{
   line-height: 1.5rem;
   width: 60%;
   
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color:var(--font-color);
 }
 
@@ -272,7 +289,7 @@ main section{
   border-radius: 10px;
 }
 .services-container p:last-child:hover{
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .services-container img{
@@ -288,30 +305,38 @@ main section{
   
   position: absolute;
   width: 50%;
-  height: 10px;
+  height: 1%;
   background-color: black;
   bottom: 0;
   border-radius: 10px 10px 0 0;
 }
 .services-deco-stripes{
   position: relative;
-  height: 2vw;
-  width: 5vw;
-  background-color: black;
+  height: 40vh;
+  width: 17%;
+  background-color: inherit;
   border-radius: 0 0 20px 20px;
 }
 
-.services-deco-stripes:nth-child(2){
-  height: 5vw;
+/* .services-deco-stripes:nth-child(2){
+  height: 6vw;
 }
 .services-deco-stripes:nth-child(3){
-  height: 3vw;
+  height: 6vw;
+} */
+.services-deco-top{
+  position: absolute;
+  width: 50%;
+  height: 1%;
+  background-color: black;
+  top: 0;
+  border-radius: 0px 0px 10px 10px;
 }
 
 /*CONTACT section*/
 #contact{
   position: relative;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   flex-direction: column;
   align-items: flex-end;
@@ -350,7 +375,13 @@ main section{
 }
 
 .contact-container-button button:hover{
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
+}
+
+.contact-hours{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 #contact .about-deco{
@@ -359,11 +390,7 @@ main section{
   
 }
 
-.contact-hours{
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
+
 
 #contact .about-deco-stripe{
   border-left: solid 1.5px gray;
@@ -379,6 +406,15 @@ main section{
 }
 #contact .about-deco-stripe:nth-child(1){
   height: calc(3 * var(--font-mobile-big));
+}
+#contact .stripe-deco-top{
+  position: absolute;
+  width: 100vw;
+  height: 5%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 10px 10px;
 }
   
 
